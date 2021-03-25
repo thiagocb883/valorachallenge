@@ -52,4 +52,5 @@ o primeiro teste falha.
 
 ## Coleção Postman
 API Advisor: http://apiadvisor.climatempo.com.br/doc/index.html
-Documentação: https://documenter.getpostman.com/view/13714122/TzCHCqex
+
+Documentação Postman: https://documenter.getpostman.com/view/13714122/TzCHCqex
