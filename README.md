@@ -3,10 +3,10 @@
 # Projeto de automação de teste E2E
 
 ## Instalando dependências
+```
 npm i
-
+```
 ## Rodando o projeto
-
 Para executar via navegador web
 ```
 ./node_modules/.bin/cypress open ou npx cypress open
@@ -45,8 +45,11 @@ E preencha os inputs do formulario
 E envie
 Então serei redirecionado para uma página de confirmação 
 
-
 ## Considerações finais
 Considerando o primeiro caso de teste, para fazer login em menos de 1.5 segundos, as vezes é retornado um erro exclusivamente do carregamento da página.
 Pois as vezes o carregamento varia entre 1.4 ~ 1.7 segundos, e considerando o cenário de testes, onde o tempo de carregamento deve ser menor que 1.5, quando esse tempo é ultrapassado,
 o primeiro teste falha.
+
+## Coleção Postman
+API Advisor: http://apiadvisor.climatempo.com.br/doc/index.html
+Documentação: https://documenter.getpostman.com/view/13714122/TzCHCqex
