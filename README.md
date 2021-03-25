@@ -3,7 +3,7 @@
 # Projeto de automação de teste E2E
 
 ## Instalando dependências
-npm -i
+npm i
 
 ## Rodando o projeto
 
@@ -14,9 +14,10 @@ Para executar via navegador web
 Para executar via linha de comando 
 ```
 npx cypress run
+```
 
 
-#Casos de teste
+## Casos de Teste
 CT-01
 Cenário: Carregar a página em menos de 1.5 segundos
 Dado que eu como usuario acesse a página 
