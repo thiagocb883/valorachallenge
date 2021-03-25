@@ -9,9 +9,13 @@ import { getRandomText } from '../support/getRandomText'
 describe('1 - Automação Valora', () => {
 
   it('1.1 - Validando carregamento da pág e video', () => {
-
     //Visitando a página e validando o seu tempo de carregamento
     cy.visit('/', { timeout: 1500 })
+    cy.log('Tempo de carregamento menor que 1.5 segundos ')
+  })
+
+  it('1.2 - Validando o video', () => {
+    cy.visit('/')
     cy.log('Tempo de carregamento menor que 1.5 segundos ')
 
     //Validando o video da tela inicial
@@ -22,10 +26,9 @@ describe('1 - Automação Valora', () => {
     cy.get('.playpause')
       .should('be.visible')
     cy.log('video inicial não está quebrado')
-  })
+  });
 
-  it('1.2 - Download dos cases e artigos', () => {    
-
+  it('1.3 - Download dos cases e artigos', () => {    
     //Download da Case da empresa ClickBus
     cy.downloadFile('https://valora.cc/downloads/case-clickbus.pdf','cypress/downloads','case-clickbus.pdf')
       validateBinaryFile('case-clickbus.pdf', 4737527)
@@ -39,8 +42,7 @@ describe('1 - Automação Valora', () => {
       validateBinaryFile('case-eletrosom.pdf', 1156895)
     })
 
-  it('1.3 - Validando envio de formluário', () => {
-
+  it('1.4 - Validando envio de formluário', () => {
     //Variaveis para preenchimento do form
     let name = generateName();
     let numberCell = '1699' + getRandomNumbersSize(7);
@@ -49,7 +51,7 @@ describe('1 - Automação Valora', () => {
     let mensagem = 'Thiago Oliveira teste E2E - ' + getRandomNumbersSize(3) + getRandomText(3);
 
     //Visitando a página e validando o seu tempo de carregamento
-    cy.visit('/', {timeout: 1500})
+    cy.visit('/')
 
     //Acessando o form de contato
     cy.get('.text-center > .btn')
